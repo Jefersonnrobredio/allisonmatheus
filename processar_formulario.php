@@ -10,25 +10,19 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
+    $telefone = $_POST["telefone"];
     $email = $_POST["email"];
+    $assunto = $_POST["assunto"];
     $mensagem = $_POST["mensagem"];
-    
-    $to = "allisonmatheuspanda@icloud.com"; 
-    $assunto = "Nova mensagem do formulário do site";
-    
-    $mensagemFormatada = "Nome: $nome\n";
-    $mensagemFormatada .= "Email: $email\n";
-    $mensagemFormatada .= "Mensagem:\n$mensagem";
-    
-    $headers = "From: $email";
-    
-    // Enviar e-mail
-    mail($to, $assunto, $mensagemFormatada, $headers);
-    
-    // Redirecionar para uma página de confirmação
-    header("Location: obrigado.html");
-    exit;
-    }
-    ?>
+
+    $destinatario = "allisonmatheuspanda@icloud.com"; 
+
+    $corpo_email = "Nome: $nome\nTelefone: $telefone\nE-mail: $email\nAssunto: $assunto\nMensagem:\n$mensagem";
+
+    mail($destinatario, "Novo formulário de contato", $corpo_email);
+
+   
+}
+?>
 </body>
 </html>

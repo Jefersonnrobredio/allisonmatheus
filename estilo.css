@@ -6,7 +6,7 @@
     padding: 0;
 }
 html{
-    /* me permite deslizar cuando hago clic en los links del menu */
+    
     scroll-behavior: smooth;
 }
 /* MENU */
@@ -19,7 +19,7 @@ html{
     z-index: 99;
 }
 .contenedor-header header{
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -32,29 +32,31 @@ html{
     color: #f6a700;
     text-decoration: none;
 }
-.contenedor-header header ul{
+.contenedor-header header nav ul{
     display: flex;
     list-style: none;
 }
 .contenedor-header header nav ul li a{
     text-align: none;
-    color: #fff;
+    color: #f6a700;
     margin: 0 15px;
     padding: 3px;
     transition: .5s;
     text-decoration: none;
+    
 }
 .contenedor-header header nav ul li a:hover{
     color: #f6a700;
 }
 .nav-responsive{
     background-color: #83736d;
-    color:#fff;
+    color:#f6a700;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     display: none;
 }
+
 /* SECCION I N I C I O */
 .home{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
@@ -68,14 +70,14 @@ html{
 .home .contenido-banner{
     padding: 20px;
     background-color: #1e2326;
-    max-width: 350px;
+    max-width: 300px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
 }
 .home .contenido-banner img{
     margin-top: 40px;
-    border: 4px solid #f6a700;
+    border: 2px solid #f6a700;
     display: block;
     width: 80%;
     margin: auto;
@@ -94,7 +96,7 @@ html{
     color: #fff;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #f6a700;
+    border: 2px solid #f6a700;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -211,55 +213,73 @@ html{
     width: 100%;
     border-radius: 14px;
 }
+
+button a {
+    color: #fff; 
+    text-decoration: none;
+}
+
+button a:hover {
+    color: #fdfdfd; 
+}
 /* SECCION S K I L L S */
-.skills{
+.skills {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
-.skills .contenido-seccion{
+
+.skills .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.skills h2{
+
+.skills h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+}
 
-}
-.skills .fila{
+.skills .fila {
     display: flex;
+    flex-wrap: wrap;
 }
-.skills .fila .col{
+
+.skills .fila .col {
     width: 50%;
     padding: 0 20px;
 }
-.skills .fila .col h3{
+
+.skills .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.skills .skill > span{
+
+.skills .skill > span {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
 }
-.skills .skill .barra-skill{
+
+.skills .skill .barra-skill {
     height: 8px;
     width: 80%;
     background-color: #131517;
     position: relative;
     margin-bottom: 30px;
 }
-.skills .skill .progreso{
+
+.skills .skill .progreso {
     background-color: #f6a700;
     position: absolute;
     top: 0;
     left: 0;
     height: 8px;
 }
-.skills .skill .barra-skill span{
+
+.skills .skill .barra-skill span {
     position: absolute;
     height: 40px;
     width: 40px;
@@ -271,95 +291,105 @@ html{
     right: -15px;
     font-size: 14px;
 }
-/* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
+
+.skills .skill .javascript {
     width: 0%;
-    animation: 2s javascript forwards;
-}
-@keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 75%;}
+    animation: animateSkill 2s forwards;
 }
 
-.skills .skill .htmlcss{
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-@keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 89%;}
+@keyframes animateSkill {
+    0% { width: 0%; }
+    100% { width: 75%; }
 }
 
-.skills .skill .photoshop{
+.skills .skill .htmlcss {
     width: 0%;
-    animation: 2s photoshop forwards;
-}
-@keyframes photoshop {
-    0%{width: 0%;}
-    100%{width: 95%;}
+    animation: animateHtmlCss 2s forwards;
 }
 
-.skills .skill .wordpress{
-    width: 0%;
-    animation: 2s wordpress forwards;
-}
-@keyframes wordpress {
-    0%{width: 0%;}
-    100%{width: 81%;}
+@keyframes animateHtmlCss {
+    0% { width: 0%; }
+    100% { width: 89%; }
 }
 
-.skills .skill .drupal{
+.skills .skill .photoshop {
     width: 0%;
-    animation: 2s drupal forwards;
-}
-@keyframes drupal {
-    0%{width: 0%;}
-    100%{width: 55%;}
+    animation: animatePhotoshop 2s forwards;
 }
 
-.skills .skill .comunicacion{
-    width: 0%;
-    animation: 2s comunicacion forwards;
-}
-@keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 80%;}
+@keyframes animatePhotoshop {
+    0% { width: 0%; }
+    100% { width: 95%; }
 }
 
-.skills .skill .trabajo{
+.skills .skill .wordpress {
     width: 0%;
-    animation: 2s trabajo forwards;
-}
-@keyframes trabajo {
-    0%{width: 0%;}
-    100%{width: 70%;}
+    animation: animateWordpress 2s forwards;
 }
 
-.skills .skill .creatividad{
-    width: 0%;
-    animation: 2s creatividad forwards;
-}
-@keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 99%;}
+@keyframes animateWordpress {
+    0% { width: 0%; }
+    100% { width: 81%; }
 }
 
-.skills .skill .dedicacion{
+.skills .skill .drupal {
     width: 0%;
-    animation: 2s dedicacion forwards;
-}
-@keyframes dedicacion {
-    0%{width: 0%;}
-    100%{width: 65%;}
+    animation: animateDrupal 2s forwards;
 }
 
-.skills .skill .proyect{
-    width: 0%;
-    animation: 2s proyect forwards;
+@keyframes animateDrupal {
+    0% { width: 0%; }
+    100% { width: 55%; }
 }
-@keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 94%;}
+
+.skills .skill .comunicacion {
+    width: 0%;
+    animation: animateComunicacion 2s forwards;
+}
+
+@keyframes animateComunicacion {
+    0% { width: 0%; }
+    100% { width: 80%; }
+}
+
+.skills .skill .trabajo {
+    width: 0%;
+    animation: animateTrabajo 2s forwards;
+}
+
+@keyframes animateTrabajo {
+    0% { width: 0%; }
+    100% { width: 70%; }
+}
+
+.skills .skill .creatividad {
+    width: 0%;
+    animation: animateCreatividad 2s forwards;
+}
+
+@keyframes animateCreatividad {
+    0% { width: 0%; }
+    100% { width: 99%; }
+}
+
+.skills .skill .dedicacion {
+    width: 0%;
+    animation: animateDedicacion 2s forwards;
+}
+
+@keyframes animateDedicacion {
+    0% { width: 0%; }
+    100% { width: 65%; }
+}
+
+.skills .skill .proyect {
+    width: 0%;
+    animation: animateProyect 2s forwards;
+}
+
+@keyframes animateProyect {
+    0% { width: 0%; }
+    100% { width: 94%; }
 }
 /* SECCION CURRICULUM */
 .curriculum{
@@ -493,7 +523,7 @@ html{
 .portfolio .galeria .proyecto{
   position: relative;
   border-radius: 10%;
-  box-shadow: 0 0 1rem #f6a700;
+  box-shadow: 0 0 0.7rem #f6a700;
   overflow: hidden;
   display: flex;
   margin-bottom: 2rem;
@@ -529,31 +559,43 @@ html{
     margin-bottom: 0px;
 }
 /* SECCION CONTACTO */
-.contacto{
-    background-image: url(img/contact_bg.png);
+.contacto {
+    background-image: url(imagens/contact_bg.png);
     background-color: #1e2326;
     color: #fff;
     padding: 50px 0;
 }
-.contacto .contenido-seccion{
-    max-width: 1100px;
+
+.contacto .contenido-seccion {
+    max-width: 1200px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
-.contacto h2{
+
+.contacto h2 {
     font-size: 48px;
     font-family: 'Righteous';
-    text-align: center;
+    text-align: center; 
     padding: 20px 0;
 }
-.contacto .fila{
+
+.contacto .fila {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
 }
-.contacto .col{
-    width: 50%;
+
+.contacto .col {
+    width: 100%;
+    max-width: 500px;
     padding: 10px;
-    position: relative;
+    box-sizing: border-box;
 }
-.contacto .col input, .contacto .col textarea{
+
+.contacto .col input,
+.contacto .col textarea {
     display: block;
     width: 100%;
     padding: 18px;
@@ -563,22 +605,26 @@ html{
     color: #fff;
     font-size: 18px;
 }
-.contacto button{
+
+.contacto button {
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
-    width: fit-content;
-    display: block;
+    border: 2px solid #f6a700;
+    width: 100%;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
     color: #fff;
-    position: relative;
-    z-index: 10;
     border-radius: 16px;
-    overflow: hidden; 
+    overflow: hidden;
+    transition: background-color 0.5s;
 }
-.contacto button .overlay{
+
+.contacto button:hover {
+    background-color: #f6a700;
+}
+
+.contacto button .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -586,15 +632,18 @@ html{
     height: 100%;
     background-color: #f6a700;
     z-index: -1;
-    transition: width 1s
+    transition: width 1s;
 }
-.contacto button:hover .overlay{
+
+.contacto button:hover .overlay {
     width: 100%;
 }
-.contacto .col img{
+
+.contacto .col img {
     width: 100%;
 }
-.contacto .col .info{
+
+.contacto .col .info {
     position: absolute;
     top: 40%;
     background-color: #252A2E;
@@ -603,33 +652,61 @@ html{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.contacto .col .info ul{
+
+.contacto .col .info ul {
     list-style: none;
 }
-.contacto .col .info ul li{
+
+.contacto .col .info ul li {
     margin-bottom: 20px;
 }
-.contacto .col .info ul li i{
+
+.contacto .col .info ul li i {
     color: #f6a700;
     display: inline-block;
     margin-right: 20px;
 }
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 768px) {
+    .contacto .col {
+        width: 100%;
+        max-width: none;
+    }
+
+    .contacto .col .info {
+        position: static;
+        max-width: none;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 0;
+        margin: 20px auto;
+    }
+
+    .contacto button {
+        padding: 8px 18px;
+        font-size: 14px;
+        margin: 10px auto;
+    }
+}
 footer{
     background-color: #252A2E;
     color: #fff;
-    padding: 50px 0 30px 0;
+    padding: 25px 0 15px 0;
     text-align: center;
     position: relative;
     width: 100%;
 }
 footer .redes{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 footer .redes a{
     color: #fff;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 2px solid #f6a700;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -638,6 +715,11 @@ footer .redes a{
     font-size: 20px;
     transition: .3s;
 }
+
+footer .redes a:hover{
+    background-color: #f6a700;
+}
+
 footer .arriba{
     display: block;
     width: 50px;
@@ -677,10 +759,10 @@ footer .arriba{
     }
 }
 @media screen and (max-width:700px){
-    .sobremi .fila{
+    .sobre .fila{
         display: block;
     }
-    .sobremi .fila .col{
+    .sobre .fila .col{
         width: fit-content;
     }
 
@@ -714,10 +796,10 @@ footer .arriba{
     .portfolio .galeria .proyecto img{
         width: 100%;
     }
-    .contacto .fila{
+    .contact .fila{
         display: block;
     }
-    .contacto .fila .col{
+    .contact .fila .col{
         width: 100%;
     }
 }
