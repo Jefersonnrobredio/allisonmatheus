@@ -56,7 +56,7 @@
 
             
             <button>
-                <a href="Caminho/Para/Seu/Curriculo.pdf" download="Curriculo_Allison_Matheus.pdf">Download CV <i class="fa-solid fa-download"></i></a>
+                <a href="https://drive.google.com/file/d/1hyVte_acTN99uuSUzSBMiGqxyqTvQV62/view?usp=sharing" download="Curriculo_Allison_Matheus.pdf">Download CV <i class="fa-solid fa-download"></i></a>
     <span class="overlay"></span>
             </button>
         </div>
@@ -305,17 +305,39 @@
     <!--  CONTACTO -->
     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
-            <h2>CONTACT</h2>
+            <h2>CONTACT-ME</h2>
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">
-                    <form action="processar_formulario.php" method="post">
-                        <input type="text" name="nome" placeholder="Name">
-                        <input type="text" name="telefone" placeholder="Phone number">
-                        <input type="text" name="email" placeholder="E-mail">
-                        <input type="text" name="assunto" placeholder="Subject">
-                        <textarea name="mensagem" cols="30" rows="10" placeholder="Message"></textarea>
-                        <button type="submit">Send Message<i class="fa-solid fa-paper-plane"></i></button>
+                    <form action="#">
+                        <div class="input-box">
+                            <div class="input-field field">
+                                <input type="text" placeholder="Full Name" id="name"
+                                class="item" autocomplete="off">
+                            </div>
+                            <div class="input-field field">
+                                <input type="text" placeholder="Email Adress" id="email"
+                                class="item" autocomplete="off">
+                            </div>
+
+                            <div class="input-box">
+                            <div class="input-field field">
+                                <input type="text" placeholder="Phone Number" id="phone"
+                                class="item" autocomplete="off">
+                            </div>
+                            <div class="input-field field">
+                                <input type="text" placeholder="Subject" id="subject"
+                                class="item" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="textarea-field field">
+                            <textarea name="" id="message" cols="30" rows="10" 
+                            placeholder="Your message" class="item"
+                            autocomplete="off"></textarea>
+                        </div>
+
+                        <button type="submit">Send message</button>
+
                     </form>
                         <span class="overlay"></span>
                     </button>
@@ -338,7 +360,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -39,3 +39,33 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+const form = document.querySelector('form');
+const name = document.getElementById("name");
+const phone  = document.getElementById("phone");
+const email = document.getElementById("email");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");
+
+function sendEmail() {
+    const bodyMessage = `Name: ${name.value}<br> Email: ${email.value}<br> Número de Telefone: ${phone.value}<br> Mensagem: ${mess.value}<br>`;
+
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "allisonmatheuspanda@icloud.com",
+        Password : "1CDE4A6C59BB31CFE154F39FCF67FBECB6AF",
+        To : 'allisonmatheuspanda@icloud.com',
+        From : "allisonmatheuspanda@icloud.com",
+        Subject : subject.value,
+        Body : bodyMessage
+    }).then(
+      message => alert(message)
+    );
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    sendEmail();
+});

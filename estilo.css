@@ -118,7 +118,7 @@ html{
     margin: auto;
 }
 .about h2{
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
@@ -162,28 +162,7 @@ html{
     font-weight: bold;
     border-radius: 5px;
 }
-.about .fila .col .contenedor-intereses{
-    display: flex;
-    flex-wrap: wrap;
-}
-.about .fila .col .contenedor-intereses .interes{
-    width: 100px;
-    height: 100px;
-    background-color: #252A2E;
-    border-radius: 10px;
-    margin: 0 15px 15px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-}.about .fila .col .contenedor-intereses .interes:hover{
-    background-color: #f6a700;
-}
-.about .fila .col .contenedor-intereses .interes i{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
+
 .about button{
     cursor: pointer;
     background-color: transparent;
@@ -235,7 +214,7 @@ button a:hover {
 }
 
 .skills h2 {
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
@@ -402,7 +381,7 @@ button a:hover {
     margin: auto;
 }
 .curriculum h2{
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
@@ -508,7 +487,7 @@ button a:hover {
     margin: auto;
 }
 .portfolio h2{
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
@@ -575,16 +554,15 @@ button a:hover {
 }
 
 .contacto h2 {
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Righteous';
     text-align: center; 
-    padding: 20px 0;
+    margin-bottom: 10px;
 }
 
-.contacto .fila {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
+.contacto .form {
+    width: 600px;
+    text-align: center; 
 }
 
 .contacto .col {
@@ -593,6 +571,7 @@ button a:hover {
     padding: 10px;
     box-sizing: border-box;
 }
+
 
 .contacto .col input,
 .contacto .col textarea {
